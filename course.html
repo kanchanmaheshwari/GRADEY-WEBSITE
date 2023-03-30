@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Courses</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="styleForGradeItem.css" rel="stylesheet" type="text/css" />
+  <link href="confirm.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Questrial&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div id="divLogo">
+      <img src="/Landing Page + Login/logo.png" alt="logo">
+    </div>
+    <div>
+      <h1>GRADEY - GRADE TRACKER</h1>
+    </div>
+    <div id="divLogOut">
+      <div class="right hide-small logoutButton" onmouseover="this.style.background='#ada9a9'"
+        onmouseout="this.style.background='none'">
+        <a id="bar-item" class="bar-item button"><i class="fa fa-user"></i> LOG OUT</a>
+      </div>
+    </div>
+  </div>
+  <div class="topcontainer">
+    <div id="leftContainer">
+      <div id="left-elements">
+        <div id="average-wrap">
+          <strong>GPA: <span id="gpaTotal">N/A </span></strong>
+          &nbsp;
+          <strong>Average: <span id="averageTotal">0 </span>%</strong>
+        </div>
+        <button id="upcomingAssignments" class="upcomingAssignments">Upcoming Assignments </button>
+      </div>
+    </div>
+    <div class='addForCourse'>
+      <button id='addForCourse'>Add Course</button>
+    </div>
+    <div style="width: 300px;">
+      <div class="boxcontainer" style="border: 1px solid #DDD; border-radius:15px; background-color: #fff;">
+        <input size='50' id="searchBox" type="text" placeholder="Search the courses">
+        <i class="fa-solid fa-magnifying-glass" style="color: #000;"></i>
+      </div>
+    </div>
+  </div>
+
+  <div id="cardContainer" class="container"></div>
+
+  <!-- Footer -->
+  <footer class="center black padding-64" style="bottom: 0; position: fixed; width: 100%; color: #fff; background-color: #05379B; 
+   text-align: center; font-size: 15px; font-family: 'Raleway', sans-serif; line-height: 1.8; margin-top: 60px;">
+    <p>
+      &copy; Gradey - Grade Tracker, All rights reserved.
+    </p>
+  </footer>
+
+</body>
+
+<script src="helperFunctions.js" type="module"> </script>
+<script src="script.js" type="module"></script>
+<script src="upcomingAsmt.js" type="module"></script>
+
+</html>

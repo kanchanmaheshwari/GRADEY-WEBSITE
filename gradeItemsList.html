@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Course Grade Items</title>
+  <link href="styleForGradeItem.css" rel="stylesheet" type="text/css" />
+  <link href="confirm.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Questrial&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+</head>
+
+<body style="margin: 0%;">
+
+  <!-- Header -->
+  <div
+    style="display: flex; justify-content: space-between; width: 100%; background-color: #fff; color: #000; margin: 0; align-items: center;">
+    <div style="width:120px">
+      <img style="width:50%; object-fit: cover; padding-top: 5px; padding-left: 16px;"
+        src="/Landing Page + Login/logo.png" alt="logo">
+    </div>
+    <div>
+      <h1 style="text-align: center; font-size: large;">GRADEY - GRADE TRACKER</h1>
+    </div>
+    <div style="width:120px">
+      <div class="right hide-small logoutButton" style="padding:16px;" onmouseover="this.style.background='#ada9a9'"
+        onmouseout="this.style.background='none'">
+        <a style="font-family: Raleway, sans-serif; font-size: 15px;  color: inherit; 
+        text-decoration: none; text-align: center; user-select: none; cursor: pointer;" id="bar-item"
+          class="bar-item button">
+          <i class="fa fa-user"></i> LOG OUT</a>
+      </div>
+    </div>
+  </div>
+
+  <div class='container' id='gradeItemCard'></div>
+
+  <div class="container" id="tableContainer"></div>
+
+  <!-- Footer -->
+  <footer class="center black padding-64" style="position:fixed; bottom: 0; width: 100%; color: #fff; background-color: #05379B; 
+text-align: center; font-size: 15px; font-family: 'Raleway', sans-serif; line-height: 1.8; margin-top: 60px;">
+    <p>
+      &copy; Gradey - Grade Tracker, All rights reserved.
+    </p>
+  </footer>
+
+</body>
+
+<script src="helperFunctions.js" type="module"> </script>
+
+<script src="confirm.js" type="module"> </script>
+
+<script src="gradeItems.js" type='module'> </script>
+
+<script src="script.js" type="module"></script>
